@@ -1,7 +1,9 @@
 const removeFromArray = function() {
     array = arguments[0];
     for (let i = 1; i < arguments.length; i++) {
-        array.splice(array.indexOf(arguments[i]), 1);
+        if (array.includes(arguments[i])) {
+            array.splice(array.indexOf(arguments[i]), 1);
+        }
     }
     return array;
 };
